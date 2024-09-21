@@ -29,6 +29,9 @@ body {
   z-index: 1;
   font-weight: bold;
   letter-spacing: 4px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 @media only screen and (max-width: 600px) {
   /* Estilos específicos para dispositivos con un ancho máximo de 600px */
@@ -36,6 +39,9 @@ body {
       font-size: 14px; /* Reduce el tamaño del texto para dispositivos más pequeños */
       margin-bottom: 530px;
       letter-spacing: 3px;
+      text-align: center;
+    justify-content: center;
+    align-items: center;
   }
 
 }
@@ -49,6 +55,8 @@ body {
   opacity: 0;
   animation: fadeIn 3s ease-in-out forwards;
   text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 @keyframes fadeIn {
   from {
