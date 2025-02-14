@@ -1,33 +1,120 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="img/flowers.png" type="image/x-icon">
-    <title>Flowers</title>
+    <title>¿Quieres ser mi Valentín?</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            /* Cambios aquí: */
+            background-image: url('/img/DSC02039.jpg'); /* Reemplaza 'fondo.jpg' con el nombre de tu imagen */
+            background-size: cover; /* Cubre toda la página */
+            background-position: center; /* Centra la imagen */
+            background-repeat: no-repeat; /* Evita que se repita */
+            background-attachment: fixed; /* Mantiene el fondo fijo al hacer scroll (opcional) */
+            /* Fin de los cambios */
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            color: #e63946;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .botones {
+            display: flex;
+            justify-content: center;
+        }
+
+        button {
+            background-color: #e63946;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 1em;
+            cursor: pointer;
+            margin: 0 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #c42834;
+        }
+
+        #si:hover {
+            background-color: #52b788;
+        }
+
+        #no:hover {
+            background-color: #ff7f50;
+        }
+
+        .corazon {
+            width: 100px;
+            height: 90px;
+            margin-bottom: 20px;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="%23e63946" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg>');
+            background-size: contain;
+            background-repeat: no-repeat;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        @keyframes heartbeat {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.15);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
 </head>
-
 <body>
-    <div class="greetings">
-        <span>H</span>
-        <span>o</span>
-        <span>l</span>
-        <span>a</span>
-        <span>!</span>
-    </div>
-    <div class="description">
-        <span>Hoy es el día de las flores amarillas 💖😊</span>
-    </div>
-    <div class="button">
-        <button class="botones">
-            <a href="flower.html" style="color: #fff;">¡Presiona para verlas!</a>
-        </button>
+    <div class="container">
+        <div class="corazon"></div>
+        <h1>Mi amor, ¿Quieres ser mi Valentín?</h1>
+        <p>Este Día de San Valentín, quiero hacerte una pregunta muy especial...</p>
+        <div class="botones">
+            <button id="si" onclick="respuestaSi()">¡Sí, por supuesto!</button>
+            <button id="no" onclick="respuestaNo()">¡No! (Piénsalo bien 😉)</button>
+        </div>
     </div>
 
-    
+    <script>
+        function respuestaSi() {
+            alert('¡Sabía que dirías que sí! ❤️ ¡Feliz Día de San Valentín, mi amor!');
+        }
+
+        function respuestaNo() {
+            alert('¡Oh no! 💔 ¡Solo estaba bromeando! ¡Por favor, di que sí! 😉 ¡Feliz Día de San Valentín, mi amor!');
+        }
+    </script>
 </body>
-
 </html>
